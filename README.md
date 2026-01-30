@@ -19,7 +19,7 @@
 
     git clone <your-repository-link>
 
-    npm install (Installs Playwright and all dependencies) 
+    npm install and npx playwright install (Installs Playwright and all dependencies) 
 
 4. Running the Tests
 
