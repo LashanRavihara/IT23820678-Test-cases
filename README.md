@@ -25,7 +25,7 @@
 
     Run all tests: npx playwright test
 
-    Run tests with : npx playwright test --project=chromium
+    Run tests with : npx playwright test --project=chromium or npx playwright test --project=firefox
 
     View HTML Report: npx playwright show-report
 

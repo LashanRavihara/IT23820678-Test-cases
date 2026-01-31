@@ -171,8 +171,8 @@ test('Neg_Fun_0003 - Standard Singlish to Sinhala conversion is accurate.', asyn
 
 test('Neg_Fun_0004 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
-  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('[ ] { }');
-  await page.getByText('[ ] { }').click();
+  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('waahanaya paaree giyaa');
+  await page.getByText('වාහනය පාරේ ගියා').click();
 });
 
 test('Neg_Fun_0005 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
@@ -207,13 +207,26 @@ test('Neg_Fun_0009 - Standard Singlish to Sinhala conversion is accurate.', asyn
 
 test('Neg_Fun_0010 - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
-  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('waahanayak giyaa');
-  await page.getByText('වාහනයක් ගියා').click();
+  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('waahanayak aluthen miladhii ganna oona');
+  await page.getByText('වාහනයක් අලුතෙන් මිලදී ගන්න ඕන').click();
 });
 
+//UI test can't catch it with code need to see it real time
 test('Pos_UI - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mQQ gedhara yanavaa');
   await page.getByText('මං ගෙදර යනවා').click();
 });
 
+
+
+//this the UI bug that cannot get by script..i got it while testing manually my test cases
+
+test('Neg_UI_0001 - Standard Singlish to Sinhala conversion UI proof', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  
+  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('puurvakaThanaya');
+  await page.waitForTimeout(500); 
+  await page.getByText('පූර්වකථනය').click();
+  await page.screenshot({ path: 'IT23820678_UI_Proof.png' });
+});
