@@ -17,7 +17,7 @@
 3. Installation Instructions
 
 
-    git clone <your-repository-link>
+    git clone <https://github.com/LashanRavihara/IT23820678-Test-cases.git>
 
     npm install and npx playwright install (Installs Playwright and all dependencies) 
 
@@ -25,7 +25,7 @@
 
     Run all tests: npx playwright test
 
-    Run tests with UI: npx playwright test --project=chromium
+    Run tests with : npx playwright test --project=chromium
 
     View HTML Report: npx playwright show-report
 
