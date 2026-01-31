@@ -25,13 +25,13 @@
 
     Run all tests: npx playwright test
 
-    Run tests with UI: npx playwright test --headed
+    Run tests with UI: npx playwright test --project=chromium
 
     View HTML Report: npx playwright show-report
 
 5. Project Structure
 
-    test/: Contains the Playwright test scripts.
+    test: Contains the Playwright test scripts.
 
     playwright.config.js: The configuration file for target URL and browsers.
 

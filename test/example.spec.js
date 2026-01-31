@@ -213,7 +213,7 @@ test('Neg_Fun_0010 - Standard Singlish to Sinhala conversion is accurate.', asyn
 
 test('Pos_UI - Standard Singlish to Sinhala conversion is accurate.', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
-  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('man gedhara yanavaa');
-  await page.getByText('මන් ගෙදර යනවා').click();
+  await page.getByRole('textbox', { name: 'Input Your Singlish Text Here.' }).fill('mQQ gedhara yanavaa');
+  await page.getByText('මං ගෙදර යනවා').click();
 });
 
